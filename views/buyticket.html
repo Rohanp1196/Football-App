@@ -1,124 +1,159 @@
 <html>
+
 <head>
-    <meta charset="utf-8"/>
-    <link href="stylesheets/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="stylesheets/960.css" rel="stylesheet" type="text/css"/>
- <link href="stylesheets/home_pageCSS.css" rel="stylesheet" type="text/css"/>
- <link href="stylesheets/formstyle.css" rel="stylesheet" type="text/css"/>
-    <link href="stylesheets/cmnCSS.css" rel="stylesheet" type="text/css"/>
-  
-    <script type="text/javascript" src="javascripts/modernizr-1.6.min.js"></script>
- 
 
-    
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+
+
+
+
 </head>
+
 <body>
-    <div id="main">
-    
-        <div id="top">
-            <div id="top_v1">
-                <label id="name_label">Football Mania</label>
-            </div>
-            
-            <div id="top_v2">
-                <div id="top_v2_h1">
 
-                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
 
-                        <a id="try" class="a2a_button_google_plus"></a>
-                           <a id="try" class="a2a_button_twitter"></a>
-                        <a id="try" class="a2a_button_facebook"></a>
-                    </div>
-
-                </div>
-                <div id="top_v2_h2">
-                
-                    <div id="top_left">
-                       
-                    </div>
-
-                    <div id="search_div">
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">FIFA &#9917</a>
         </div>
-        <div id="blank">a</div>
-        
-        <div id="div2">
-        
-            <div id="div2_1">
-                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="/"><img src="images/home_page_icon.png" style="height:30px ;width:30px"/></a>
-            </div>
-        
-            <div id="div2_2">
-                    <a href="/topperformer" style="background-color: blue">Top Performer</a>
-                        
-                        <a href="/buyticket" style="background-color: red">&nbsp;&nbsp;Buy Tickets&nbsp;&nbsp;</a>
-                        
-                        <a href="/standings" style="background-color: green"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standings&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        
-
-
-            </div>
-
-        </div>
-    <div style="text-align: center;">
-        <h2>Responsive Checkout Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
-      
-        <div class="row">
-          <div class="col-50">
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <label for="fname"><i class="fa fa-user"></i> Match Info:</label>
-            <select name="cars">
-            <option value="volvo">FCB VS RM(59 $) 13th October 2019</option>
-            <option value="saab">PSG VS MC(59 $) 15th October 2019</option>
-            <option value="fiat">MU VS BM(59 $) 17th October 2019</option>
-            </select>
-
-            
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-            
-          </div>
-          
-        </div>
-         <input type="submit" value="Continue to checkout" class="btn">
-      </form>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/topperformer">Top Performers</a></li>
+            <li class="active"><a href="/buyticket">Tickets</a></li>
+            <li><a href="/standings">Rankings</a></li>
+        </ul>
     </div>
-  </div>
-  
+</nav>
+
+<div class="container-fluid top-margin">
+
+
+
+
+    <br/>
+    <br/>
+
+
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6 ">
+            <div class="inner_ticket">
+                <h1 class="center ">Buy Tickets</h1>
+                <form class="form-horizontal " action="">
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="email ">Name:</label>
+                        <div class="col-sm-8 ">
+                            <input type="text " class="form-control " id="name " placeholder="Enter name " required>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="email ">Email:</label>
+                        <div class="col-sm-8 ">
+                            <input type="email " class="form-control " id="email " placeholder="Enter email " required>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="match_info ">Match Info:</label>
+                        <div class="col-sm-8 ">
+                            <select class="form-control " id="sel1 " required>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="email ">Card Number:</label>
+                        <div class="col-sm-8 ">
+                            <input type="text " class="form-control " placeholder="Card Number " required>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="email ">Name on card:</label>
+                        <div class="col-sm-8 ">
+                            <input type="text " class="form-control " placeholder="Name on card " required>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-sm-4 " for="email ">CVV:</label>
+                        <div class="col-sm-8 ">
+                            <input type="text " class="form-control " placeholder="CVV " required>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-sm-offset-4 col-sm-8 ">
+                            <button type="submit" class="btn btn-success full_width " id="modal_button">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+
+        </div>
+    </div>
+
 </div>
 
 
-    </div>
-    </div>
 
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="javascripts/scripts.js"></script>
-<script src="javascripts/buy.js">
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ticket Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Your ticket has been booked.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+
+
+
+
+
+        $("#modal_button").click(function() {
+
+
+
+            $("#myModal").modal();
+
+
+        });
+    });
 </script>
 
 </body>
-
 
 </html>
