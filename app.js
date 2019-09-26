@@ -1,13 +1,17 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var lineReader = require('line-reader');
+var session = require('express-session');
+
 var index = require('./routes/index');
+var users = require('./routes/users');
+
 var app = express();
+//Used for using ejs file in node
+app.set('view engine','ejs');
 
-//View engine setup
-app.set('views', './views');
-
+//used for setting the directory
+app.set('views','./views');
 
 
 app.use(bodyParser.json());
