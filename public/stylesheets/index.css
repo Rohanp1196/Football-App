@@ -1,5 +1,3 @@
-body {}
-
 .inner_tab {
     padding: 50px;
     background-color: lightgray;
@@ -89,4 +87,14 @@ body {}
     font-size: 130px;
     text-align: center;
     padding: 20px;
+}
+.border {
+    margin-top: 100px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.error {
+    color: red;
 }

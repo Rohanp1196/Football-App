@@ -22,68 +22,74 @@
 <body>
 
 
-<nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">FIFA &#9917 </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/home_page">Home</a></li>
+                <li><a href="/topperformer">Top Performers</a></li>
+                <li><a href="/buyticket">Tickets</a></li>
+                <li><a href="/standings">Rankings</a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>  <b> <%= name %></b></a></li>
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">FIFA &#9917 </a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/topperformer">Top Performers</a></li>
-            <li><a href="/buyticket">Tickets</a></li>
-            <li><a href="/standings">Rankings</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container-fluid">
 
 
-    <div class="row top-margin">
+        <div class="row top-margin">
 
 
-        <div class="down">
-            <div class="col-md-4">
-                <div class="tab">
-                    <a href="/topperformer">
-                        <div class="inner_tab">
+            <div class="down">
+                <div class="col-md-4">
+                    <div class="tab">
+                        <a href="/topperformer">
+                            <div class="inner_tab">
 
-                            <p>Top Performers &#128694</p>
+                                <p>Top Performers &#128694</p>
 
-                        </div>
-                    </a>
+                            </div>
+                        </a>
+                    </div>
+
+
                 </div>
+                <div class="col-md-4">
+                    <div class="tab">
+                        <a href="/buyticket">
+                            <div class="inner_tab">
 
+                                <p>Buy Tickets &#127915</p>
 
-            </div>
-            <div class="col-md-4">
-                <div class="tab">
-                    <a href="/buyticket">
-                        <div class="inner_tab">
+                            </div>
+                        </a>
+                    </div>
 
-                            <p>Buy Tickets &#127915</p>
-
-                        </div>
-                    </a>
                 </div>
+                <div class="col-md-4">
+                    <div class="tab">
+                        <a href="/standings">
+                            <div class="inner_tab">
 
-            </div>
-            <div class="col-md-4">
-                <div class="tab">
-                    <a href="/standings">
-                        <div class="inner_tab">
+                                <p>Rankings &#128202</p>
 
-                            <p>Rankings &#128202</p>
+                            </div>
+                        </a>
+                    </div>
 
-                        </div>
-                    </a>
                 </div>
 
             </div>
-
         </div>
     </div>
-</div>
 
 
 
