@@ -13,8 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/player.css">
+    <script type="text/javascript" src="/javascripts/ball.js"></script>
 
 
 </head>
@@ -35,24 +35,35 @@
         </ul>
     </div>
 </nav>
-
+<div id="animate">
+<body onload = "init()">
+    
+    <canvas id = "canvas"
+            height = "110"
+            width = "1600">
+        <p>Canvas not supported!</p>
+    </canvas>
+	</div>
 <div class="container">
     <div class="row top_performers">
         <h2>Top Performers</h2>
         <div class="col-md-4">
 
             <img src="images/messi.jpg" height="250px" width="100%" />
+			<img src="images/fcb.png" class="img-top" height="250px" width="100%" />
             <h4>Messi - 50 Goals</h4>
             <h4>Fc Barcelona</h4>
         </div>
         <div class="col-md-4">
             <img src="images/pogba.jpg" height="250px" width="100%" />
+			<img src="images/mu.png" class="img-top" height="250px" width="100%" />
             <h4>Pogba - 30 Goals</h4>
             <h4>Manchester United</h4>
         </div>
         <div class="col-md-4">
 
             <img src="images/neymar.jpg" height="250px" width="100%" />
+			<img src="images/psg.png" class="img-top" height="250px" width="100%" />
             <h4>Neymar - 25 Goals</h4>
             <h4>Paris St Germain</h4>
         </div>
@@ -65,18 +76,21 @@
         <h2>Top Assisters</h2>
         <div class="col-md-4">
             <img src="images/gb.jpg" height="250px" width="100%" />
+			<img src="images/rm.png" class="img-top" height="250px" width="100%" />
             <h4>Bale - 5 Assists</h4>
             <h4>Real Madrid</h4>
 
         </div>
-        <div class="col-md-4 ">
+        <div class="col-md-4">
 
             <img src="images/ibrahm.jpg" height="250px" width="100%" />
-            <h4>Ibrahimovic - 3 Assists</h4>
+            <img src="images/la.png" class="img-top" height="250px" width="100%" />
+			<h4>Ibrahimovic - 3 Assists</h4>
             <h4>LA Galaxy</h4>
         </div>
-        <div class="col-md-4 ">
+        <div class="col-md-4">
             <img src="images/ronaldo.jpg" height="250px" width="100%" />
+			<img src="images/ju.png" class="img-top" height="250px" width="100%" />
             <h4>Ronaldo - 2 Assists</h4>
             <h4>Juventus</h4>
 
