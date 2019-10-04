@@ -1,0 +1,123 @@
+<html>
+
+<head>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/teamstyle.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+   
+        <script>
+            $( function() {
+              var icons = {
+                header: "ui-icon-circle-arrow-e",
+                activeHeader: "ui-icon-circle-arrow-s"
+              };
+              $( "#accordion" ).accordion({
+                icons: icons,
+                collapsible: true,
+                heightStyle: "fill"
+              });
+              $( "#toggle" ).button().on( "click", function() {
+                if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                  $( "#accordion" ).accordion( "option", "icons", null );
+                } else {
+                  $( "#accordion" ).accordion( "option", "icons", icons );
+                }
+              });
+              $( "#accordion-resizer" ).resizable({
+                minHeight: 300,
+                minWidth: 500,
+                 resize: function() {
+                $( "#accordion" ).accordion( "refresh" );
+      }
+    });
+            } );
+            </script>
+
+
+
+
+</head>
+
+<body background="images/pic1.jpg">
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">FIFA &#9917 </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/home_page">Home</a></li>
+                <li><a href="/topperformer">Top Performers</a></li>
+                <li><a href="/buyticket">Tickets</a></li>
+                <li><a href="/standings">Rankings</a></li>
+                <li class="active"><a href="/teams">Teams</a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>  <b> <%= name %></b></a></li>
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h2 class="center">Top Teams</h2>
+    <div id="accordion-resizer" class="ui-widget-content">
+    <div id="accordion">
+        <h3>FC Barcelona</h3>
+        <div col-sp>
+          <p>
+            
+            Futbol Club Barcelona, commonly referred to as Barcelona and colloquially known as Barça, is a Spanish professional football club based in Barcelona, Catalonia, Spain.
+
+            Founded in 1899 by a group of Swiss, Spanish, English, and Catalan footballers led by Joan Gamper, the club has become a symbol of Catalan culture and Catalanism, hence the motto "Més que un club" ("More than a club"). Unlike many other football clubs, the supporters own and operate Barcelona. It is the fourth-most valuable sports team in the world, worth $4.06 billion, and the world's second-richest football club in terms of revenue, with an annual turnover of €690.4 million.The official Barcelona anthem is the "Cant del Barça", written by Jaume Picas and Josep Maria Espinàs.
+            
+            Domestically, Barcelona has won a record 74 trophies; 26 La Liga, 30 Copa del Rey, 13 Supercopa de España, 3 Copa Eva Duarte, and 2 Copa de la Liga trophies, as well as being the record holder for the latter four competitions. In international club football, the club has won 20 European and worldwide titles; 5 UEFA Champions League titles, a record 4 UEFA Cup Winners' Cup, a joint record 5 UEFA Super Cup, a record 3 Inter-Cities Fairs Cup, and 3 FIFA Club World Cup.Barcelona was ranked first in the International Federation of Football History & Statistics Club World Ranking for 1997, 2009, 2011, 2012, and 2015 and currently occupies the second position on the UEFA club rankings. The club has a long-standing rivalry with Real Madrid; matches between the two teams are referred to as El Clásico. 
+          </p>
+          
+        </div>
+        <h3>FC Bayern Munich</h3>
+        <div>
+          <p>
+            With its 25 national titles and 17 DFB-Pokals, FC Bayern Munich firmly belongs in the conversation about the greatest football clubs in the world. It is one of only three clubs to win all three major European trophies: the European Cup/Champions League, the Europa League and the Cup Winner's Cup. In addition to being undisputedly the most successful club in Germany, they are also ranked third on All-Time Club World Rankings. When the Bundesliga was founded in 1963, Bayern was not among the sixteen teams invited. Instead, they gained promotion two seasons later, led by three young players who would later be referred to as "the axis": Sepp Maier, Franz Beckenbauer and Gerd Müller. 
+            It was during their time at the club (1965–1979) that Bayern would finally turn into the powerhouse it is today. Those 14 years saw the club win four Bundesliga titles, four DFB-Pokals, a Cup Winners's Cup in 1967, as well as three straight European Cups from 1974 to 1976.
+          </p>
+        </div>
+        <h3>Real Madrid</h3>
+        <div>
+          <p>
+            Real Madrid CF has probably achieved all a football club could. With a record 32 La Liga titles, 19 Copa del Rey trophies, a sensational 10 European Cups/Champions Leagues and 2 UEFA Cups, Real are second to none in a competition for the greatest football club of all time. While the club enjoys fierce rivalries with Barcelona (El Clásico) and Atlético Madrid (El Derbi Madrileño), Real has been the most supported club in the country for the majority of its history. Many of the best players in the world have played in the clubs white shirts, including legends like Alfredo Di Stéfano and Ferenc Puskás. The post-war period saw Santiago Bernabéu Yeste take over as the club's president, after having carried various functions at the club since joining its junior ranks in 1909. Faced with a difficult task of rebuilding the club, Bernabéu went on to construct a brand-new stadium – later renamed to the Santiago Bernabéu stadium – and sign a number of high-profile international players in order to compete at the European stage. With a bonafide dream team centered around the talents of Alfredo Di Stéfano, Ferenc Puskás and Francisco Gento, Real cruised to four La Ligas and one Copa del Rey by the end of the 60s. More impressively, they claimed the first five European Cups ever organized, handily destroying any opposition in their path from 1956 to 1960. 
+            This legendary crew is still considered by many to be the greatest football team ever assembled.
+        </p>
+        </div>
+        <h3>Manchester City</h3>
+        <div>
+          <p>
+            Much like their Mancunian rivals, Manchester City have seen many highs during their colorful existence. With four First Division/Premier League titles, five FA Cups, three League Cups and one Cup Winners' Cup, City stand tall as one of the most successful English football clubs of all time. Still, their history contains more than enough lows to even it up; for example, City are still the only English champions to be relegated the very next season. The club was formed in 1880, under the name of St. Mark's, after an initiative by Arthur Connell (the rector of St Mark's Church) and his daughter, Anna Connell. After calling them self Gorton FC and Ardwick AFC for shorter periods, they would change their name to Manchester City in 1894. 
+            This coincides with some financial troubles that eventually led to restructuring of the club. The name change – combined with moving to the spacious grounds of Hyde Road a couple of years later – saw Manchester City become the most popular club in the city, with an enthusiastic fan base that followed them wherever they went. This rise in stature led to the club earning promotion to the First Division in 1899.
+         </p>
+        </div>
+        </div>
+      </div>
+
+
+
+</body>
+
+</html>

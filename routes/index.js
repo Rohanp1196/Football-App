@@ -50,6 +50,18 @@ router.get('/topperformer', function(req, res, next) {
 
 
 });
+router.get('/teams', function(req, res, next) {
+
+    if (req.session.user) {
+        var val = req.session.user.username;
+        res.render('teams', { name: val });
+    } else {
+        res.redirect('login');
+    }
+
+
+});
+
 router.get('/', function(req, res, next) {
     if (req.session.user) {
         var val = req.session.user.username;
