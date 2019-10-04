@@ -14,37 +14,47 @@
 
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/player.css">
-    <!---- <script type="text/javascript" src="/javascripts/ball.js"></script> -->
-
-    <style type="text/css">#canvasSection{ position:fixed;}</style>
-
-    <script type="text/javascript" src="/javascripts/animation.js"></script>
-
-
+    <!-- <script type="text/javascript" src="/javascripts/ball.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#tabs").tabs({
+                beforeLoad: function(event, ui) {
+                    ui.jqXHR.fail(function() {
+                        ui.panel.html(
+                            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                            "If this wouldn't be a demo.");
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 
-<body  onLoad="init()">
-<canvas id="canvasSection" >Error, canvas is not supported</canvas>
+<body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">FIFA &#9917</a>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">FIFA &#9917</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/topperformer">Top Performers</a></li>
+                <li><a href="/buyticket">Tickets</a></li>
+                <li><a href="/standings">Rankings</a></li>
+                <li><a href="/teams">Teams</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>  <b> <%= name %></b></a></li>
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/topperformer">Top Performers</a></li>
-            <li><a href="/buyticket">Tickets</a></li>
-            <li><a href="/standings">Rankings</a></li>
-            <li><a href="/teams">Teams</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span>  <b> <%= name %></b></a></li>
-            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-        </ul>
-    </div>
-</nav>
-<!--
+    </nav>
+    <!--
 <div id="animate">
 <body onload = "init()">
     <canvas id = "canvas"
@@ -54,62 +64,65 @@
     </canvas>
     </div>
     -->
-<div class="container">
-    <div class="row top_performers">
-        <h2>Top Performers</h2>
-        <div class="col-md-4">
+    <div class="container">
+        <div class="row top_performers">
+            <h2>Top Performers</h2>
 
-            <img src="images/messi.jpg" height="250px" width="100%" />
-			<img src="images/fcb.png" class="img-top" height="250px" width="100%" />
-            <h4>Messi - 50 Goals</h4>
-            <h4>Fc Barcelona</h4>
-        </div>
-        <div class="col-md-4">
-            <img src="images/pogba.jpg" height="250px" width="100%" />
-			<img src="images/mu.png" class="img-top" height="250px" width="100%" />
-            <h4>Pogba - 30 Goals</h4>
-            <h4>Manchester United</h4>
-        </div>
-        <div class="col-md-4">
 
-            <img src="images/neymar.jpg" height="250px" width="100%" />
-			<img src="images/psg.png" class="img-top" height="250px" width="100%" />
-            <h4>Neymar - 25 Goals</h4>
-            <h4>Paris St Germain</h4>
+            <div id="tabs">
+                <ul>
+
+                    <li><a href="/ronaldo">Ronaldo</a></li>
+                    <li><a href="/messi">Messi</a></li>
+                    <li><a href="/neymar">Neymar</a></li>
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
         </div>
+
+        <div class="row Top_assist">
+            <h2>Top Assisters</h2>
+            <div class="col-md-4">
+                <img src="images/gb.jpg" height="250px" width="100%" />
+                <img src="images/rm.png" class="img-top" height="250px" width="100%" />
+                <h4>Bale - 5 Assists</h4>
+                <h4>Real Madrid</h4>
+
+            </div>
+            <div class="col-md-4">
+
+                <img src="images/ibrahm.jpg" height="250px" width="100%" />
+                <img src="images/la.png" class="img-top" height="250px" width="100%" />
+                <h4>Ibrahimovic - 3 Assists</h4>
+                <h4>LA Galaxy</h4>
+            </div>
+            <div class="col-md-4">
+                <img src="images/ronaldo.jpg" height="250px" width="100%" />
+                <img src="images/ju.png" class="img-top" height="250px" width="100%" />
+                <h4>Ronaldo - 2 Assists</h4>
+                <h4>Juventus</h4>
+
+            </div>
+
+
+
+        </div>
+
+
 
 
 
     </div>
 
-    <div class="row Top_assist">
-        <h2>Top Assisters</h2>
-        <div class="col-md-4">
-            <img src="images/gb.jpg" height="250px" width="100%" />
-			<img src="images/rm.png" class="img-top" height="250px" width="100%" />
-            <h4>Bale - 5 Assists</h4>
-            <h4>Real Madrid</h4>
-
-        </div>
-        <div class="col-md-4">
-
-            <img src="images/ibrahm.jpg" height="250px" width="100%" />
-            <img src="images/la.png" class="img-top" height="250px" width="100%" />
-			<h4>Ibrahimovic - 3 Assists</h4>
-            <h4>LA Galaxy</h4>
-        </div>
-        <div class="col-md-4">
-            <img src="images/ronaldo.jpg" height="250px" width="100%" />
-			<img src="images/ju.png" class="img-top" height="250px" width="100%" />
-            <h4>Ronaldo - 2 Assists</h4>
-            <h4>Juventus</h4>
-
-        </div>
 
 
-
-    </div>
-</div>
 
 
 </body>

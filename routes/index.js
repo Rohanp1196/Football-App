@@ -106,6 +106,41 @@ router.get('/logout', mainController.get_logout);
 /* GET Login Page. */
 router.get('/home_page', mainController.getHome);
 
+router.get('/ronaldo', function(req, res, next) {
+    console.log("got request for ronaldo");
+    if (req.session.user) {
+        var val = req.session.user.username;
+        res.render('ronaldo', { name: val });
+    } else {
+        res.redirect('login');
+    }
+
+
+});
+router.get('/messi', function(req, res, next) {
+    console.log("got request for messi");
+    if (req.session.user) {
+        var val = req.session.user.username;
+        res.render('messi', { name: val });
+    } else {
+        res.redirect('login');
+    }
+
+
+});
+
+router.get('/neymar', function(req, res, next) {
+
+    if (req.session.user) {
+        var val = req.session.user.username;
+        res.render('neymar', { name: val });
+    } else {
+        res.redirect('login');
+    }
+
+
+});
+
 
 
 
