@@ -15,6 +15,17 @@ router.get('/buyticket', function(req, res, next) {
 
 });
 
+router.get('/dragger', function(req, res, next) {
+    if (req.session.user) {
+        var val = req.session.user.username;
+        res.render('dragger', { name: val });
+    } else {
+        res.redirect('login');
+    }
+
+
+});
+
 /* GET Dashboard page. */
 router.get('/standings', function(req, res, next) {
     if (req.session.user) {

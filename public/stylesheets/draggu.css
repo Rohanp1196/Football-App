@@ -1,0 +1,29 @@
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+        background-image: url("images/bcg.jpg");
+    }
+    img
+    {
+        height: 100px;
+        width: 100px;
+        margin: 2px;
+    }
+    .draggable
+    {
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+    }
+    .dropped
+    {
+        position: static !important;
+    }
+    #dvSource, #dvDest
+    {
+        border: 5px solid #ccc;
+        padding: 5px;
+        min-height: 100px;
+        width: 1000px;
+    }
+   
